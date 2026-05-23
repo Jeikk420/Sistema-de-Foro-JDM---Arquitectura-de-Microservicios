@@ -20,4 +20,8 @@ public class NotificacionController {
     public ResponseEntity<NotificacionResponseDTO> notificar(@Valid @RequestBody NotificacionRequestDTO request) {
         return new ResponseEntity<>(service.crearNotificacion(request), HttpStatus.CREATED);
     }
+    @GetMapping("/{id}")
+    public ResponseEntity<NotificacionResponseDTO> obtenerPorId(@PathVariable Long id) {
+        return new ResponseEntity<>(service.obtenerPorId(id), HttpStatus.OK);
+    }
 }

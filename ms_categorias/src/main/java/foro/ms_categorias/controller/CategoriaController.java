@@ -20,4 +20,8 @@ public class CategoriaController {
     public ResponseEntity<CategoriaResponseDTO> crear(@Valid @RequestBody CategoriaRequestDTO request) {
         return new ResponseEntity<>(service.crearCategoria(request), HttpStatus.CREATED);
     }
+    @GetMapping("/{id}")
+    public ResponseEntity<CategoriaResponseDTO> obtenerPorId(@PathVariable Long id) {
+        return new ResponseEntity<>(service.obtenerPorId(id), HttpStatus.OK);
+    }
 }

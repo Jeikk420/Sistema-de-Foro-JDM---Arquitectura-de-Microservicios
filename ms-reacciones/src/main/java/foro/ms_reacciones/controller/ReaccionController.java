@@ -18,4 +18,8 @@ public class ReaccionController {
     public ResponseEntity<ReaccionResponseDTO> reaccionar(@Valid @RequestBody ReaccionRequestDTO request) {
         return new ResponseEntity<>(service.crearReaccion(request), HttpStatus.CREATED);
     }
+    @GetMapping("/{id}")
+    public ResponseEntity<ReaccionResponseDTO> obtenerPorId(@PathVariable Long id) {
+        return new ResponseEntity<>(service.obtenerPorId(id), HttpStatus.OK);
+    }
 }

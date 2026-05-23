@@ -38,4 +38,11 @@ public class GlobalExceptionHandler {
         // Retorna un 400 BAD REQUEST, ya que el usuario envió datos mal formateados
         return new ResponseEntity<>(errores, HttpStatus.BAD_REQUEST);
     }
+
+    // 3. Atrapa los errores cuando no se encuentra un usuario (el famoso ID 999)
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<ErrorResponseDTO> manejarRuntimeException(RuntimeException ex) {
+        ErrorResponseDTO error = new ErrorResponseDTO(ex.getMessage(), HttpStatus.NOT_FOUND.value());
+        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
+    }
 }

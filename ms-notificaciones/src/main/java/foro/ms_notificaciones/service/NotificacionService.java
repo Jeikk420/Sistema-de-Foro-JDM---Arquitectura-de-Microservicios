@@ -43,4 +43,17 @@ public class NotificacionService {
         
         return response;
     }
+    public NotificacionResponseDTO obtenerPorId(Long id) {
+        Notificacion notificacion = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Notificación no encontrada con ID: " + id));
+        
+        NotificacionResponseDTO response = new NotificacionResponseDTO();
+        response.setId(notificacion.getId());
+        
+        // OJO: Ajusta o descomenta esto según los campos que tenga tu NotificacionResponseDTO
+        // response.setMensaje(notificacion.getMensaje());
+        // response.setUsuarioId(notificacion.getUsuarioId());
+        
+        return response;
+    }
 }

@@ -47,4 +47,14 @@ public class ComentarioService {
         
         return response;
     }
+    public ComentarioResponseDTO obtenerPorId(Long id) {
+        Comentario comentario = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Comentario no encontrado con ID: " + id));
+        
+        ComentarioResponseDTO response = new ComentarioResponseDTO();
+        response.setId(comentario.getId());
+        response.setContenido(comentario.getContenido()); // Ajusta "contenido" según los campos de tu modelo
+        
+        return response;
+    }
 }

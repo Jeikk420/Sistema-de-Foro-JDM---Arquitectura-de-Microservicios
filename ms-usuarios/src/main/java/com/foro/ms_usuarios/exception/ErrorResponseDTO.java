@@ -1,4 +1,4 @@
-package foro.ms_usuarios.exception; // <- Ajusta esta línea si es necesario
+package com.foro.ms_usuarios.exception; // <- Ajusta esta línea si es necesario
 
 import java.time.LocalDateTime;
 

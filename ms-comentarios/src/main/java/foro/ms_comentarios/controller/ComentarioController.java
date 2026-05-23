@@ -18,4 +18,8 @@ public class ComentarioController {
     public ResponseEntity<ComentarioResponseDTO> crear(@Valid @RequestBody ComentarioRequestDTO request) {
         return new ResponseEntity<>(service.crearComentario(request), HttpStatus.CREATED);
     }
+    @GetMapping("/{id}")
+    public ResponseEntity<ComentarioResponseDTO> obtenerPorId(@PathVariable Long id) {
+        return new ResponseEntity<>(service.obtenerPorId(id), HttpStatus.OK);
+    }
 }
