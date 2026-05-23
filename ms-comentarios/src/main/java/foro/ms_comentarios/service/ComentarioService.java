@@ -44,6 +44,7 @@ public class ComentarioService {
         response.setContenido(guardado.getContenido());
         response.setUsuarioId(guardado.getUsuarioId());
         response.setHiloId(guardado.getHiloId());
+        response.setFechaCreacion(guardado.getFechaCreacion());
         
         return response;
     }

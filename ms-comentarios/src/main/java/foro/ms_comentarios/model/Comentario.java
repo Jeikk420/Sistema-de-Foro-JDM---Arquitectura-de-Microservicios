@@ -22,4 +22,8 @@ public class Comentario {
     public void setHiloId(Long hiloId) { this.hiloId = hiloId; }
     public LocalDateTime getFechaCreacion() { return fechaCreacion; }
     public void setFechaCreacion(LocalDateTime fechaCreacion) { this.fechaCreacion = fechaCreacion; }
+    @jakarta.persistence.PrePersist
+    protected void onCreate() {
+        this.fechaCreacion = java.time.LocalDateTime.now();
+    }
 }
