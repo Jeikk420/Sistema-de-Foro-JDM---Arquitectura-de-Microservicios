@@ -22,7 +22,7 @@ public class HiloController {
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
-    // Aquí está el blindaje del "id" para que no tire error 500
+    
     @GetMapping("/{id}")
     public ResponseEntity<HiloResponseDTO> obtenerPorId(@PathVariable("id") Long id) {
         return new ResponseEntity<>(service.obtenerPorId(id), HttpStatus.OK);

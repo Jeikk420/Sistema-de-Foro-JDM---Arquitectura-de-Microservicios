@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 public class Reaccion {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) private Long id;
     
-    @Column(nullable = false) private String tipo; // "LIKE" o "DISLIKE"
+    @Column(nullable = false) private String tipo; 
     @Column(nullable = false) private Long usuarioId;
     @Column(nullable = false) private Long hiloId;
     

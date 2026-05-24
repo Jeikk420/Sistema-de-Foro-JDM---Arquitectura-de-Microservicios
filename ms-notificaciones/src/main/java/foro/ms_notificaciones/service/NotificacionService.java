@@ -50,9 +50,7 @@ public class NotificacionService {
         NotificacionResponseDTO response = new NotificacionResponseDTO();
         response.setId(notificacion.getId());
         
-        // OJO: Ajusta o descomenta esto según los campos que tenga tu NotificacionResponseDTO
-        // response.setMensaje(notificacion.getMensaje());
-        // response.setUsuarioId(notificacion.getUsuarioId());
+        
         
         return response;
     }

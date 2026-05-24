@@ -23,7 +23,7 @@ public class ComentarioService {
         log.info("Validando usuario " + dto.getUsuarioId() + " e hilo " + dto.getHiloId());
 
         try {
-            // DOBLE LLAMADA: Revisamos ambos motores
+            
             usuarioClient.obtenerPorId(dto.getUsuarioId());
             hiloClient.obtenerPorId(dto.getHiloId());
             log.info("Ambas validaciones remotas exitosas.");
@@ -54,7 +54,7 @@ public class ComentarioService {
         
         ComentarioResponseDTO response = new ComentarioResponseDTO();
         response.setId(comentario.getId());
-        response.setContenido(comentario.getContenido()); // Ajusta "contenido" según los campos de tu modelo
+        response.setContenido(comentario.getContenido()); 
         
         return response;
     }

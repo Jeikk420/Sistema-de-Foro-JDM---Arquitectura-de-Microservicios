@@ -22,7 +22,7 @@ public class UsuarioController {
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
-    // El nuevo Endpoint que escucha la llamada de ms-hilos
+    
     @GetMapping("/{id}")
     public ResponseEntity<UsuarioResponseDTO> obtenerPorId(@PathVariable Long id) {
         return new ResponseEntity<>(service.obtenerPorId(id), HttpStatus.OK);

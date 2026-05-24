@@ -48,17 +48,15 @@ public class ReaccionService {
         return response;
     }
     public ReaccionResponseDTO obtenerPorId(Long id) {
-        // Busca en la base de datos o lanza la alerta
+        
         Reaccion reaccion = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Reacción no encontrada con ID: " + id));
         
-        // Arma la respuesta
+        
         ReaccionResponseDTO response = new ReaccionResponseDTO();
         response.setId(reaccion.getId());
         
-        // OJO: Descomenta o ajusta las líneas de abajo según los datos que tenga tu ReaccionResponseDTO
-        // response.setTipo(reaccion.getTipo()); 
-        // response.setUsuarioId(reaccion.getUsuarioId());
+        
         
         return response;
     }

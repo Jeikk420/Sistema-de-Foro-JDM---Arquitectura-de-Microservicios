@@ -17,7 +17,7 @@ public class UsuarioService {
     @Autowired
     private UsuarioRepository repository;
 
-    // MÉTODO 1: Crear el usuario
+   
     public UsuarioResponseDTO crearUsuario(UsuarioRequestDTO dto) {
         log.info("Iniciando creación de usuario: " + dto.getUsername());
 
@@ -35,9 +35,9 @@ public class UsuarioService {
         response.setEmail(guardado.getEmail());
 
         return response;
-    } // <-- Aquí se cierra el primer método correctamente
+    } 
 
-    // MÉTODO 2: Buscar el usuario por ID (El que necesita ms-hilos)
+    
     public UsuarioResponseDTO obtenerPorId(Long id) {
         log.info("Buscando usuario con ID: " + id);
         

@@ -34,15 +34,15 @@ public class CategoriaService {
         return response;
     }
     public CategoriaResponseDTO obtenerPorId(Long id) {
-        // 1. Busca en la base de datos o lanza el error que atrapa el escudo
+        
         Categoria categoria = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Categoría no encontrada con ID: " + id));
         
-        // 2. Transforma la entidad a DTO (Ajusta los datos según los atributos que tengas en tu DTO)
+        
         CategoriaResponseDTO response = new CategoriaResponseDTO();
         response.setId(categoria.getId());
         response.setNombre(categoria.getNombre());
-        // response.setDescripcion(categoria.getDescripcion()); // (Descomenta esto si tu categoría tiene descripción)
+        
         
         return response;
     }

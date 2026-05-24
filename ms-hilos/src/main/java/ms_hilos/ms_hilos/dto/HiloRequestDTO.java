@@ -17,7 +17,7 @@ public class HiloRequestDTO {
     @NotNull(message = "El ID de la categoría es obligatorio")
     private Long categoriaId;
 
-    // Getters y Setters
+    
     public String getTitulo() { return titulo; }
     public void setTitulo(String titulo) { this.titulo = titulo; }
 

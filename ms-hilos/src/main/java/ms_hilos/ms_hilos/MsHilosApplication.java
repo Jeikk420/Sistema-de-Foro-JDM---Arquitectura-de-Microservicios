@@ -4,7 +4,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients; // <-- Importación
 
 @SpringBootApplication
-@EnableFeignClients // <-- ¡Activa la comunicación remota!
+@EnableFeignClients 
 public class MsHilosApplication {
 
 	public static void main(String[] args) {

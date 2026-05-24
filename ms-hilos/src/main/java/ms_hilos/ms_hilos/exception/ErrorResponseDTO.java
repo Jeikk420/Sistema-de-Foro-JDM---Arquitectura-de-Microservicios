@@ -13,7 +13,7 @@ public class ErrorResponseDTO {
         this.timestamp = LocalDateTime.now();
     }
 
-    // Getters y Setters
+    
     public String getMensaje() { return mensaje; }
     public void setMensaje(String mensaje) { this.mensaje = mensaje; }
     public int getStatus() { return status; }

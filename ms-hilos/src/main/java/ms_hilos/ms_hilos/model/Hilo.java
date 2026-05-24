@@ -21,7 +21,7 @@ public class Hilo {
     @Column(nullable = false, columnDefinition = "TEXT")
     private String contenido;
 
-    // Aquí está la magia: solo guardamos el ID del usuario como referencia remota
+    
     @Column(nullable = false)
     private Long usuarioId;
 
@@ -31,7 +31,7 @@ public class Hilo {
     @Column(nullable = false)
     private LocalDateTime fechaCreacion = LocalDateTime.now();
 
-    // Getters y Setters
+    
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 

@@ -9,8 +9,8 @@ public class Notificacion {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) private Long id;
     
     @Column(nullable = false) private String mensaje;
-    @Column(nullable = false) private Long usuarioId; // A quién le llega
-    private boolean leida = false; // Por defecto nace sin leer
+    @Column(nullable = false) private Long usuarioId; 
+    private boolean leida = false;
     private LocalDateTime fechaCreacion = LocalDateTime.now();
 
     public Long getId() { return id; }

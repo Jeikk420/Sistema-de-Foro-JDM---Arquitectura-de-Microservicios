@@ -1,4 +1,4 @@
-package foro.ms_reacciones; // Recuerda ajustar el package si es necesario
+package foro.ms_reacciones; 
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
